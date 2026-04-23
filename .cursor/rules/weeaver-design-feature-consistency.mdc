@@ -1,0 +1,56 @@
+---
+description: Weeaver product, design system, and implementation standards
+alwaysApply: true
+---
+
+# Weeaver Design and Feature Consistency
+
+## Mission and Product Focus
+- Build for social impact: connect NGOs and volunteers with real-time need visibility.
+- Prioritize these pillars in every feature: Heat Map of Need, skill+location matching, impact gamification, NGO command center, offline resilience, and Paper-to-Pixel OCR flow.
+- When requirements are ambiguous, choose the simplest implementation that improves outcomes for volunteers or NGOs.
+
+## UI and Visual System
+- Use Tailwind-first styling; no inline styles and no CSS modules.
+- Use design colors: primary `#1d4ed8`, secondary `#10b981`, accent `#f59e0b`, dark `#1e293b`, and neutral gray scale.
+- Prefer reusable patterns and components: `HeatMap`, `VolunteerCard`, `TaskCard`, `MeritBadge`, `DashboardWidget`, `SkillPill`, `UrgencyBadge`, and `LocationTag`.
+- Preserve visual motifs: impact scoring badge, urgency left-bar indicator, location pills, green skill pills, and amber heat overlays.
+- Keep cards and dialogs consistent: rounded corners, subtle shadows, clear CTA hierarchy.
+
+## Typography and Content Hierarchy
+- Use Outfit for headings/titles and Inter for body/labels/captions.
+- Maintain hierarchy: page titles large and bold, section headings medium, body text readable, labels/captions smaller and muted.
+- Keep volunteer and NGO dashboards visually scannable with strong metric emphasis.
+
+## React and State Architecture
+- Use functional components and hooks only.
+- No class components, no Redux/Zustand unless explicitly approved.
+- Keep auth in `AuthContext` and heat map real-time data in `HeatMapContext`.
+- Use local component state for UI concerns (modals, filters, temporary form state).
+- Avoid defining inline arrow functions in JSX props; prefer stable handlers.
+
+## Feature Behavior Requirements
+- Heat map must be data-driven (not static), with urgency intensity and area drill-down behavior.
+- Task discovery should include filtering by skill, location radius, urgency, and organization.
+- Task/application lifecycle should reflect status progression (pending to completed/reviewed).
+- Impact scoring should follow weighted calculation based on urgency, skill match, and location match.
+- NGO command center should expose key operations: task queue, volunteer roster, alerts, and top metrics.
+
+## Forms, API, and Error Handling
+- Use controlled inputs and Zod validation; show field errors on blur or submit.
+- Disable submit until valid; use clear success/error toasts.
+- Use Axios instance with JWT auth headers and a 401 interceptor logout flow.
+- Keep API responses consistent: `{ success, data, error }`.
+- Use request timeouts: 10s default, 30s for uploads.
+
+## Accessibility and Responsive Requirements
+- Use semantic HTML and proper labels for all inputs.
+- Add ARIA labels for icon-only controls.
+- Ensure keyboard navigation across all interactive elements.
+- Do not rely on color alone for urgency/status cues.
+- Verify mobile behavior across `xs/sm/md/lg/xl`; stack cards on small screens and simplify heat map layout on mobile.
+
+## Delivery Guardrails
+- No UI libraries (MUI/Chakra), no form libraries (Formik/React Hook Form), and no localStorage auth.
+- Keep naming and file organization aligned with the project structure in `src/components`, `src/pages`, `src/context`, `src/api`, `src/utils`, and `src/hooks`.
+- Include concise tests or verification steps for new behavior, including mobile and accessibility checks.
