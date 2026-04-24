@@ -58,7 +58,7 @@ export default function Login() {
         onSubmit={handleSubmit}
         className="w-full max-w-md rounded-card border border-gray-200 bg-white p-6 shadow-card"
       >
-        <h1 className="font-display text-3xl font-bold text-primary">Weeaver Login</h1>
+        <h1 className="font-display text-3xl font-bold text-primary">Weaver Login</h1>
         <p className="mt-2 text-sm text-gray-600">Connect with impact opportunities in your community.</p>
 
         <div className="mt-6 space-y-4">
@@ -104,7 +104,7 @@ export default function Login() {
         </button>
 
         <p className="mt-4 text-center text-sm text-gray-600">
-          New to Weeaver?{" "}
+          New to Weaver?{" "}
           <Link to="/register" className="font-semibold text-primary hover:text-blue-700">
             Create an account
           </Link>

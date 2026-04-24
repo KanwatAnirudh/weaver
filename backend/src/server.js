@@ -13,7 +13,7 @@ const port = Number(process.env.PORT || 5000);
 process.env.JWT_SECRET = process.env.JWT_SECRET || "dev-secret-change-me";
 
 import mongoose from "mongoose";
-const mongoUri = process.env.MONGO_URI || "mongodb://127.0.0.1:27017/weeaver";
+const mongoUri = process.env.MONGO_URI || "mongodb://127.0.0.1:27017/weaver";
 mongoose.connect(mongoUri)
   .then(() => console.log(`Connected to MongoDB at ${mongoUri}`))
   .catch(err => console.error("MongoDB connection error:", err));
@@ -39,5 +39,5 @@ app.use((_req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`Weeaver API running on http://localhost:${port}`);
+  console.log(`Weaver API running on http://localhost:${port}`);
 });

@@ -30,7 +30,7 @@ export default function Header() {
     <header className="sticky top-0 z-20 border-b border-gray-200 bg-white/95 backdrop-blur">
       <div className="mx-auto flex max-w-7xl items-center gap-4 px-4 py-3 sm:px-6 lg:px-8">
         <Link to="/" className="font-display text-2xl font-bold text-primary">
-          Weeaver
+          Weaver
         </Link>
 
         <label htmlFor="global-search" className="sr-only">
