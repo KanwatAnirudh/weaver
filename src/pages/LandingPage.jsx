@@ -37,7 +37,7 @@ export default function LandingPage() {
           {/* Desktop Nav */}
           <nav className="hidden md:flex items-center gap-8">
             <a href="#about" className="text-gray-600 hover:text-primary font-medium transition-colors">About Us</a>
-            <a href="#projects" className="text-gray-600 hover:text-primary font-medium transition-colors">Projects</a>
+            <Link to="/volunteer/tasks" className="text-gray-600 hover:text-primary font-medium transition-colors">Projects</Link>
             <a href="#causes" className="text-gray-600 hover:text-primary font-medium transition-colors">Causes</a>
             <a href="#get-involved" className="text-gray-600 hover:text-primary font-medium transition-colors">Get Involved</a>
             <a href="#contact" className="text-gray-600 hover:text-primary font-medium transition-colors">Contact</a>
@@ -57,7 +57,7 @@ export default function LandingPage() {
         {isMenuOpen && (
           <div className="md:hidden bg-white border-t border-gray-100 px-4 py-4 flex flex-col gap-4 absolute w-full shadow-lg">
             <a href="#about" onClick={() => setIsMenuOpen(false)} className="text-gray-600 font-medium">About Us</a>
-            <a href="#projects" onClick={() => setIsMenuOpen(false)} className="text-gray-600 font-medium">Projects</a>
+            <Link to="/volunteer/tasks" onClick={() => setIsMenuOpen(false)} className="text-gray-600 font-medium">Projects</Link>
             <a href="#causes" onClick={() => setIsMenuOpen(false)} className="text-gray-600 font-medium">Causes</a>
             <a href="#get-involved" onClick={() => setIsMenuOpen(false)} className="text-gray-600 font-medium">Get Involved</a>
             <a href="#contact" onClick={() => setIsMenuOpen(false)} className="text-gray-600 font-medium">Contact</a>
@@ -163,7 +163,7 @@ export default function LandingPage() {
                 </div>
               </div>
 
-              <a href="#projects" className="btn-secondary !rounded-full">Discover Our Work</a>
+              <Link to="/volunteer/tasks" className="btn-secondary !rounded-full">Discover Our Work</Link>
             </div>
           </div>
         </div>
@@ -260,7 +260,7 @@ export default function LandingPage() {
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <a href="#get-involved" className="btn-secondary !rounded-full !bg-white !text-primary border-none hover:shadow-xl">Become a Corporate Partner</a>
-            <a href="#projects" className="btn-primary !rounded-full !bg-blue-900 !shadow-none border border-blue-800 hover:!bg-blue-950 hover:border-blue-700 text-white">View All Projects</a>
+            <Link to="/volunteer/tasks" className="btn-primary !rounded-full !bg-blue-900 !shadow-none border border-blue-800 hover:!bg-blue-950 hover:border-blue-700 text-white">View All Projects</Link>
           </div>
         </div>
       </section>
@@ -291,7 +291,7 @@ export default function LandingPage() {
               <h4 className="text-white font-bold text-lg mb-6">Quick Links</h4>
               <ul className="space-y-3">
                 <li><a href="#about" className="hover:text-primary transition-colors flex items-center gap-2"><span className="text-xs">▶</span> About Weavers</a></li>
-                <li><a href="#projects" className="hover:text-primary transition-colors flex items-center gap-2"><span className="text-xs">▶</span> Our CSR Projects</a></li>
+                <li><Link to="/volunteer/tasks" className="hover:text-primary transition-colors flex items-center gap-2"><span className="text-xs">▶</span> Our CSR Projects</Link></li>
                 <li><a href="#causes" className="hover:text-primary transition-colors flex items-center gap-2"><span className="text-xs">▶</span> Recent Campaigns</a></li>
                 <li><a href="#get-involved" className="hover:text-primary transition-colors flex items-center gap-2"><span className="text-xs">▶</span> Volunteer with Us</a></li>
               </ul>

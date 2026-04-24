@@ -69,13 +69,25 @@ export default function Header() {
             Notifications
           </button>
 
-          <div className="hidden rounded-lg border border-gray-200 px-3 py-2 text-sm text-gray-700 sm:block">
-            {user?.name || "User menu"}
-          </div>
-
-          <button type="button" onClick={handleLogout} className="btn-secondary">
-            Logout
-          </button>
+          {user ? (
+            <>
+              <div className="hidden rounded-lg border border-gray-200 px-3 py-2 text-sm text-gray-700 sm:block">
+                {user.name || "User menu"}
+              </div>
+              <button type="button" onClick={handleLogout} className="btn-secondary">
+                Logout
+              </button>
+            </>
+          ) : (
+            <>
+              <Link to="/login" className="btn-secondary">
+                Login
+              </Link>
+              <Link to="/register" className="btn-primary">
+                Register
+              </Link>
+            </>
+          )}
         </nav>
       </div>
     </header>

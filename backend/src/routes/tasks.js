@@ -102,7 +102,7 @@ tasksRouter.post("/:id/apply", requireAuth, async (req, res) => {
   }
 });
 
-tasksRouter.get("/", requireAuth, async (req, res) => {
+tasksRouter.get("/", async (req, res) => {
   try {
     const { skill = "", urgency = "", maxDistanceKm = "", organization = "", zone = "" } = req.query;
 
@@ -142,7 +142,7 @@ tasksRouter.get("/", requireAuth, async (req, res) => {
   }
 });
 
-tasksRouter.get("/heatmap", requireAuth, async (req, res) => {
+tasksRouter.get("/heatmap", async (req, res) => {
   try {
     const tasks = await Task.find({ status: "waiting for volunteers" }).lean();
     

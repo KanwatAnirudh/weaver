@@ -89,22 +89,24 @@ export default function TaskCard({ task }) {
         )}
       </div>
 
-      <button 
-        type="button" 
-        onClick={handleApply}
-        disabled={hasApplied || isFull || applying || user?.role === "ngo"}
-        className={`mt-4 w-full px-4 py-2 font-medium rounded-lg transition-colors ${
-          hasApplied 
-            ? "bg-green-100 text-green-700 cursor-not-allowed" 
-            : isFull 
-              ? "bg-gray-100 text-gray-500 cursor-not-allowed"
-              : user?.role === "ngo" 
-                ? "bg-gray-100 text-gray-400 cursor-not-allowed pointer-events-none opacity-50"
-                : "btn-primary"
-        }`}
-      >
-        {applying ? "Applying..." : hasApplied ? "Applied" : isFull ? "Task Full" : "Apply to Task"}
-      </button>
+      {user && (
+        <button 
+          type="button" 
+          onClick={handleApply}
+          disabled={hasApplied || isFull || applying || user?.role === "ngo"}
+          className={`mt-4 w-full px-4 py-2 font-medium rounded-lg transition-colors ${
+            hasApplied 
+              ? "bg-green-100 text-green-700 cursor-not-allowed" 
+              : isFull 
+                ? "bg-gray-100 text-gray-500 cursor-not-allowed"
+                : user?.role === "ngo" 
+                  ? "bg-gray-100 text-gray-400 cursor-not-allowed pointer-events-none opacity-50"
+                  : "btn-primary"
+          }`}
+        >
+          {applying ? "Applying..." : hasApplied ? "Applied" : isFull ? "Task Full" : "Apply to Task"}
+        </button>
+      )}
     </article>
   );
 }

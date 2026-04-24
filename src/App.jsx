@@ -70,11 +70,7 @@ export default function App() {
         />
         <Route
           path="/volunteer/tasks"
-          element={
-            <RoleProtectedRoute allowedRoles={["volunteer", "admin"]}>
-              <TaskDiscovery />
-            </RoleProtectedRoute>
-          }
+          element={<TaskDiscovery />}
         />
         <Route
           path="/ngo/dashboard"
