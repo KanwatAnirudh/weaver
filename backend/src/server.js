@@ -23,6 +23,7 @@ app.use(
   cors({
     origin: frontendOrigin,
     credentials: true,
+    allowedHeaders: ["Content-Type", "Authorization"],
   }),
 );
 app.use(express.json());
