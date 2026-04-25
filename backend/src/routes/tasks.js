@@ -49,7 +49,7 @@ tasksRouter.post("/", requireAuth, async (req, res) => {
 tasksRouter.get("/ngo", requireAuth, async (req, res) => {
   try {
     const user = await findUserById(req.auth?.sub);
-    const orgName = user?.name; // or user?.organizationName based on how NGO is set
+    const orgName = user?.organizationName || user?.name;
     
     if (!orgName) return fail(res, "Organization context missing", 400);
 

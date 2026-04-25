@@ -40,7 +40,7 @@ export default function TaskManagement() {
     try {
       await createTask({
         ...formData,
-        organizationName: user?.name || "Unknown NGO"
+        organizationName: user?.organizationName || user?.name || "Unknown NGO"
       });
       setSuccess("Task created successfully!");
       setFormData({
