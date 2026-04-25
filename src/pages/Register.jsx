@@ -84,7 +84,7 @@ export default function Register() {
         onSubmit={handleSubmit}
         className="w-full max-w-md rounded-card border border-gray-200 bg-white p-6 shadow-card"
       >
-        <h1 className="font-display text-3xl font-bold text-primary">Create Weaver Account</h1>
+        <h1 className="font-display text-3xl font-bold text-primary">Create Weeaver Account</h1>
         <p className="mt-2 text-sm text-gray-600">
           Join as a volunteer or NGO and start driving measurable impact.
         </p>

@@ -8,7 +8,7 @@ import { fail, ok } from "./utils/response.js";
 
 const app = express();
 
-const frontendOrigin = process.env.FRONTEND_ORIGIN || "https://weaver-black.vercel.app";
+const frontendOrigin = process.env.FRONTEND_ORIGIN || "https://weeaver-black.vercel.app";
 const port = Number(process.env.PORT || 5000);
 process.env.JWT_SECRET = process.env.JWT_SECRET || "dev-secret-change-me";
 
@@ -39,5 +39,5 @@ app.use((_req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`Weaver API running on ${port}`);
+  console.log(`Weeaver API running on ${port}`);
 });

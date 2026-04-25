@@ -15,7 +15,7 @@ export default function AboutSection() {
             <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-secondary/20 rounded-3xl transform rotate-3 scale-105 z-0"></div>
             <img 
               src="/images/about_img.png" 
-              alt="About Weavers" 
+              alt="About Weeavers" 
               className="relative z-10 rounded-3xl shadow-2xl w-full object-cover aspect-square md:aspect-[4/5]"
             />
             <motion.div 
@@ -46,7 +46,7 @@ export default function AboutSection() {
             </h4>
             <h2 className="text-4xl md:text-5xl font-display font-bold text-gray-900 mb-6 leading-tight">Best NGO for CSR in India</h2>
             <p className="text-gray-600 text-lg mb-8 leading-relaxed">
-              At Weavers, we believe that each and every person is entitled to a worthy, meaningful, and dignified life. We are the best NGO in Delhi NCR and endeavor for the holistic growth of the Nation and its people. Our approach focuses on long-term sustainability rather than just short-term relief.
+              At Weeavers, we believe that each and every person is entitled to a worthy, meaningful, and dignified life. We are the best NGO in Delhi NCR and endeavor for the holistic growth of the Nation and its people. Our approach focuses on long-term sustainability rather than just short-term relief.
             </p>
             
             <div className="space-y-6 mb-10">

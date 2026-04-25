@@ -11,7 +11,7 @@ export default function LandingPage() {
         <div className="max-w-7xl mx-auto px-4 flex justify-between items-center text-sm">
           <div className="flex gap-6 text-gray-600">
             <span className="flex items-center gap-2">📞 +91 98188 85691</span>
-            <span className="flex items-center gap-2">✉️ info@weavers.org</span>
+            <span className="flex items-center gap-2">✉️ info@weeavers.org</span>
           </div>
           <div className="flex gap-4">
             <Link to="/register" className="text-primary hover:text-blue-800 font-medium transition-colors">Become a Volunteer</Link>
@@ -29,7 +29,7 @@ export default function LandingPage() {
               W
             </div>
             <div className="flex flex-col">
-              <span className="font-display font-bold text-2xl leading-none text-gray-900 tracking-tight">Weavers</span>
+              <span className="font-display font-bold text-2xl leading-none text-gray-900 tracking-tight">Weeavers</span>
               <span className="text-xs font-semibold tracking-widest text-primary uppercase">Foundation</span>
             </div>
           </a>
@@ -89,7 +89,7 @@ export default function LandingPage() {
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-secondary drop-shadow-sm">Shaping Futures</span>
             </h1>
             <p className="text-lg md:text-xl text-gray-300 mb-10 max-w-2xl leading-relaxed">
-              Weavers is New Delhi's leading NGO dedicated to social wellness and welfare. Join our mission to bring holistic growth to the nation and ensure a dignified life for all.
+              Weeavers is New Delhi's leading NGO dedicated to social wellness and welfare. Join our mission to bring holistic growth to the nation and ensure a dignified life for all.
             </p>
             <div className="flex flex-wrap gap-4 items-center">
               <a href="#donate" className="btn-primary text-lg px-8 py-4 !rounded-full">Make a Difference →</a>
@@ -123,7 +123,7 @@ export default function LandingPage() {
               <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-secondary/20 rounded-3xl transform rotate-3 scale-105 z-0"></div>
               <img 
                 src="/images/about_img.png" 
-                alt="About Weavers" 
+                alt="About Weeavers" 
                 className="relative z-10 rounded-3xl shadow-xl w-full object-cover aspect-square md:aspect-[4/5]"
               />
               <div className="absolute -bottom-8 -right-8 glass-panel bg-white/90 backdrop-blur-xl p-6 rounded-2xl z-20 shadow-2xl flex items-center gap-4 border border-gray-100">
@@ -139,7 +139,7 @@ export default function LandingPage() {
               <h4 className="text-secondary font-bold tracking-wider uppercase text-sm mb-2">We Make a Difference</h4>
               <h2 className="text-4xl md:text-5xl font-display font-bold text-gray-900 mb-6">Best NGO for CSR in India</h2>
               <p className="text-gray-600 text-lg mb-8 leading-relaxed">
-                At Weavers, we believe that each and every person is entitled to a worthy, meaningful, and dignified life. We are the best NGO in Delhi NCR and endeavor for the holistic growth of the Nation and its people. Our approach focuses on long-term sustainability rather than just short-term relief.
+                At Weeavers, we believe that each and every person is entitled to a worthy, meaningful, and dignified life. We are the best NGO in Delhi NCR and endeavor for the holistic growth of the Nation and its people. Our approach focuses on long-term sustainability rather than just short-term relief.
               </p>
               
               <div className="space-y-6 mb-10">
@@ -275,7 +275,7 @@ export default function LandingPage() {
                   W
                 </div>
                 <div className="flex flex-col">
-                  <span className="font-display font-bold text-2xl leading-none text-white tracking-tight">Weavers</span>
+                  <span className="font-display font-bold text-2xl leading-none text-white tracking-tight">Weeavers</span>
                   <span className="text-xs font-semibold tracking-widest text-primary uppercase">Foundation</span>
                 </div>
               </a>
@@ -290,7 +290,7 @@ export default function LandingPage() {
             <div>
               <h4 className="text-white font-bold text-lg mb-6">Quick Links</h4>
               <ul className="space-y-3">
-                <li><a href="#about" className="hover:text-primary transition-colors flex items-center gap-2"><span className="text-xs">▶</span> About Weavers</a></li>
+                <li><a href="#about" className="hover:text-primary transition-colors flex items-center gap-2"><span className="text-xs">▶</span> About Weeavers</a></li>
                 <li><Link to="/volunteer/tasks" className="hover:text-primary transition-colors flex items-center gap-2"><span className="text-xs">▶</span> Our CSR Projects</Link></li>
                 <li><a href="#causes" className="hover:text-primary transition-colors flex items-center gap-2"><span className="text-xs">▶</span> Recent Campaigns</a></li>
                 <li><a href="#get-involved" className="hover:text-primary transition-colors flex items-center gap-2"><span className="text-xs">▶</span> Volunteer with Us</a></li>
@@ -321,14 +321,14 @@ export default function LandingPage() {
                 </div>
                 <div className="flex gap-3 items-center">
                   <span className="text-primary">✉️</span>
-                  <p>info@weavers.org</p>
+                  <p>info@weeavers.org</p>
                 </div>
               </div>
             </div>
           </div>
 
           <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-sm text-gray-500">&copy; {new Date().getFullYear()} Weavers Foundation, All rights reserved.</p>
+            <p className="text-sm text-gray-500">&copy; {new Date().getFullYear()} Weeavers Foundation, All rights reserved.</p>
             <div className="flex gap-6 text-sm text-gray-400">
               <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
               <a href="#" className="hover:text-white transition-colors">Terms & Conditions</a>

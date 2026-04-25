@@ -2,18 +2,18 @@ import { useState, useRef, useEffect } from 'react';
 import { GoogleGenerativeAI } from '@google/generative-ai';
 import { MessageSquare, X, Send, Loader2, Bot } from 'lucide-react';
 
-const systemInstruction = `You are a helpful and polite virtual assistant for the Weavers Foundation website.
-Weavers Foundation is a leading NGO in Delhi NCR (India) dedicated to social wellness and welfare.
+const systemInstruction = `You are a helpful and polite virtual assistant for the Weeavers Foundation website.
+Weeavers Foundation is a leading NGO in Delhi NCR (India) dedicated to social wellness and welfare.
 You help visitors understand what the site is about, guide them to different sections (like About Us, Projects, Causes, Get Involved, Contact, Donate), and answer questions about our causes (like Education for All, Health & Healthcare, Women's Empowerment).
 Keep your answers concise, friendly, and helpful. Always encourage users to donate or get involved if appropriate.
-Contact Info: +91 98188 85691 | info@weavers.org.
+Contact Info: +91 98188 85691 | info@weeavers.org.
 Centers: Delhi (HQ), Maharashtra, Uttar Pradesh, Jharkhand, Bihar.
-If someone asks something unrelated to the NGO or social work, politely remind them that you are here to assist with the Weavers Foundation website.`;
+If someone asks something unrelated to the NGO or social work, politely remind them that you are here to assist with the Weeavers Foundation website.`;
 
 export default function Chatbot() {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState([
-    { role: 'model', text: 'Hello! I am the Weavers Foundation Assistant. How can I help you navigate the site today?' }
+    { role: 'model', text: 'Hello! I am the Weeavers Foundation Assistant. How can I help you navigate the site today?' }
   ]);
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
@@ -126,7 +126,7 @@ export default function Chatbot() {
               <Bot size={20} />
             </div>
             <div>
-              <h3 className="font-bold text-sm leading-none mb-1">Weavers Assistant</h3>
+              <h3 className="font-bold text-sm leading-none mb-1">Weeavers Assistant</h3>
               <p className="text-xs text-blue-100">Always here to help</p>
             </div>
           </div>

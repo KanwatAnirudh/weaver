@@ -15,7 +15,7 @@ import Chatbot from "./components/Chatbot";
 function LoadingScreen() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-gray-50">
-      <p className="font-display text-xl text-primary">Loading Weaver...</p>
+      <p className="font-display text-xl text-primary">Loading Weeaver...</p>
     </div>
   );
 }

@@ -17,7 +17,7 @@ export default function LandingNavbar() {
         <div className="max-w-7xl mx-auto px-4 flex justify-between items-center text-sm">
           <div className="flex gap-6 text-gray-600">
             <span className="flex items-center gap-2">📞 +91 98188 85691</span>
-            <span className="flex items-center gap-2">✉️ info@weavers.org</span>
+            <span className="flex items-center gap-2">✉️ info@weeavers.org</span>
           </div>
           <div className="flex gap-4">
             <a href="#causes" className="text-primary hover:text-blue-800 font-medium transition-colors">Become a Volunteer</a>
@@ -36,7 +36,7 @@ export default function LandingNavbar() {
               W
             </div>
             <div className="flex flex-col">
-              <span className="font-display font-bold text-2xl leading-none text-gray-900 tracking-tight">Weavers</span>
+              <span className="font-display font-bold text-2xl leading-none text-gray-900 tracking-tight">Weeavers</span>
               <span className="text-xs font-semibold tracking-widest text-primary uppercase">Foundation</span>
             </div>
           </a>

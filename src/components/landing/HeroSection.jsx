@@ -44,7 +44,7 @@ export default function HeroSection() {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="text-lg md:text-xl text-gray-300 mb-10 max-w-2xl leading-relaxed"
           >
-            Weavers is New Delhi's leading NGO dedicated to social wellness and welfare. Join our mission to bring holistic growth to the nation and ensure a dignified life for all.
+            Weeavers is New Delhi's leading NGO dedicated to social wellness and welfare. Join our mission to bring holistic growth to the nation and ensure a dignified life for all.
           </motion.p>
           
           <motion.div 
