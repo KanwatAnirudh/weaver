@@ -8,12 +8,12 @@ import { fail, ok } from "./utils/response.js";
 
 const app = express();
 
-const frontendOrigin = process.env.FRONTEND_ORIGIN || "http://localhost:5173";
+const frontendOrigin = process.env.FRONTEND_ORIGIN || "https://weaver-black.vercel.app";
 const port = Number(process.env.PORT || 5000);
 process.env.JWT_SECRET = process.env.JWT_SECRET || "dev-secret-change-me";
 
 import mongoose from "mongoose";
-const mongoUri = process.env.MONGO_URI || "mongodb://127.0.0.1:27017/weaver";
+const mongoUri = process.env.MONGO_URI || "mongodb+srv://alok2:12332112@cluster0.b3i0g2l.mongodb.net/";
 mongoose.connect(mongoUri)
   .then(() => console.log(`Connected to MongoDB at ${mongoUri}`))
   .catch(err => console.error("MongoDB connection error:", err));
@@ -39,5 +39,5 @@ app.use((_req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`Weaver API running on http://localhost:${port}`);
+  console.log(`Weaver API running on ${port}`);
 });

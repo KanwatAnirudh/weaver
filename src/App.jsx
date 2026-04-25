@@ -10,6 +10,7 @@ import VolunteerDashboard from "./pages/VolunteerDashboard";
 import TaskManagement from "./pages/TaskManagement";
 import PostedTasks from "./pages/PostedTasks";
 import LandingPage from "./pages/LandingPage";
+import Chatbot from "./components/Chatbot";
 
 function LoadingScreen() {
   return (
@@ -56,49 +57,52 @@ function DefaultRouteRedirect() {
 
 export default function App() {
   return (
-    <Routes>
-      <Route path="/login" element={<Login />} />
-      <Route path="/register" element={<Register />} />
-      <Route element={<Layout />}>
-        <Route
-          path="/volunteer/dashboard"
-          element={
-            <RoleProtectedRoute allowedRoles={["volunteer", "admin"]}>
-              <VolunteerDashboard />
-            </RoleProtectedRoute>
-          }
-        />
-        <Route
-          path="/volunteer/tasks"
-          element={<TaskDiscovery />}
-        />
-        <Route
-          path="/ngo/dashboard"
-          element={
-            <RoleProtectedRoute allowedRoles={["ngo", "admin"]}>
-              <NGODashboard />
-            </RoleProtectedRoute>
-          }
-        />
-        <Route
-          path="/ngo/tasks"
-          element={
-            <RoleProtectedRoute allowedRoles={["ngo", "admin"]}>
-              <TaskManagement />
-            </RoleProtectedRoute>
-          }
-        />
-        <Route
-          path="/ngo/posted-tasks"
-          element={
-            <RoleProtectedRoute allowedRoles={["ngo", "admin"]}>
-              <PostedTasks />
-            </RoleProtectedRoute>
-          }
-        />
-      </Route>
-      <Route path="/" element={<DefaultRouteRedirect />} />
-      <Route path="*" element={<NotFound />} />
-    </Routes>
+    <>
+      <Routes>
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route element={<Layout />}>
+          <Route
+            path="/volunteer/dashboard"
+            element={
+              <RoleProtectedRoute allowedRoles={["volunteer", "admin"]}>
+                <VolunteerDashboard />
+              </RoleProtectedRoute>
+            }
+          />
+          <Route
+            path="/volunteer/tasks"
+            element={<TaskDiscovery />}
+          />
+          <Route
+            path="/ngo/dashboard"
+            element={
+              <RoleProtectedRoute allowedRoles={["ngo", "admin"]}>
+                <NGODashboard />
+              </RoleProtectedRoute>
+            }
+          />
+          <Route
+            path="/ngo/tasks"
+            element={
+              <RoleProtectedRoute allowedRoles={["ngo", "admin"]}>
+                <TaskManagement />
+              </RoleProtectedRoute>
+            }
+          />
+          <Route
+            path="/ngo/posted-tasks"
+            element={
+              <RoleProtectedRoute allowedRoles={["ngo", "admin"]}>
+                <PostedTasks />
+              </RoleProtectedRoute>
+            }
+          />
+        </Route>
+        <Route path="/" element={<DefaultRouteRedirect />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+      <Chatbot />
+    </>
   );
 }
