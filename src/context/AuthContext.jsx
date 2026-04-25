@@ -10,6 +10,7 @@ export function AuthProvider({ children }) {
   const [isLoading, setIsLoading] = useState(true);
 
   const clearAuthState = useCallback(() => {
+    localStorage.removeItem("weaver_token");
     setUser(null);
     setRole(null);
     setToken(null);
@@ -32,6 +33,9 @@ export function AuthProvider({ children }) {
   const login = useCallback(async (credentials) => {
     const response = await axiosInstance.post("/auth/login", credentials);
     const payload = response.data?.data;
+    if (payload?.token) {
+      localStorage.setItem("weaver_token", payload.token);
+    }
     setUser(payload?.user || null);
     setRole(payload?.user?.role || null);
     setToken(payload?.token || null);
@@ -41,6 +45,9 @@ export function AuthProvider({ children }) {
   const register = useCallback(async (registrationData) => {
     const response = await axiosInstance.post("/auth/register", registrationData);
     const payload = response.data?.data;
+    if (payload?.token) {
+      localStorage.setItem("weaver_token", payload.token);
+    }
     setUser(payload?.user || null);
     setRole(payload?.user?.role || null);
     setToken(payload?.token || null);
@@ -53,6 +60,7 @@ export function AuthProvider({ children }) {
     } catch (_error) {
       // Session may already be invalid server-side.
     } finally {
+      localStorage.removeItem("weaver_token");
       clearAuthState();
     }
   }, [clearAuthState]);
