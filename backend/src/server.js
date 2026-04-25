@@ -18,6 +18,7 @@ mongoose.connect(mongoUri)
   .then(() => console.log(`Connected to MongoDB at ${mongoUri}`))
   .catch(err => console.error("MongoDB connection error:", err));
 
+app.set("trust proxy", 1);
 app.use(
   cors({
     origin: frontendOrigin,
